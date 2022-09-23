@@ -7,11 +7,11 @@ module.exports = {
       md: { max: "768px" },
       sm: { max: "480px" },
     },
-    extend: {
-      fontFamily: {
-        redHat: ["Red Hat Display", "sans-serif"],
-      },
+    container: {
+      padding: "20px",
+      center: true,
     },
+    extend: {},
   },
   plugins: [],
 };
