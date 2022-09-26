@@ -1,0 +1,18 @@
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  top: 80px;
+  right: 40%;
+  z-index: 5;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.active {
+  display: flex;
+}

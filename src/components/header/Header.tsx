@@ -1,16 +1,23 @@
-import React from "react";
-import HeaderHero from "./headerHero/HeaderHero";
+import React, { useState } from "react";
+import { isActiveMenuContext } from "../../data/contex/IsActiveMenuContext";
+import HeaderMain from "./headerMain/HeaderMain";
 import HeaderNav from "./headerNav/HeaderNav";
 const Header = () => {
+  const [isActive, setIsActive] = useState(false);
   return (
-    <>
-      <header>
+    <isActiveMenuContext.Provider
+      value={{
+        isActive,
+        setIsActive,
+      }}
+    >
+      <header className="w-[95%]">
         <div className="container">
           <HeaderNav />
-          <HeaderHero />
+          <HeaderMain />
         </div>
       </header>
-    </>
+    </isActiveMenuContext.Provider>
   );
 };
 

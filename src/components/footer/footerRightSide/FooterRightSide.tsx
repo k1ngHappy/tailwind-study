@@ -1,42 +1,20 @@
 import React from "react";
+import { navData } from "../../../data/NavData";
 
-type Props = {};
-
-const FooterRightSide = (props: Props) => {
+const FooterRightSide = () => {
   return (
-    <nav className="mt-[81px] ">
-      <ul className="flex flex-col gap-3 self-center md:hidden">
-        <li className="text-red-500 font-medium text-lg">Jump to</li>
-        <a
-          href="#"
-          className="text-lg text-slate-50 hover:text-red-500 transition-colors "
-        >
-          <li>About</li>
-        </a>
-        <a
-          href="#"
-          className="text-lg text-slate-50 hover:text-red-500 transition-colors "
-        >
-          <li>Contact</li>
-        </a>
-        <a
-          href="#"
-          className="text-lg text-slate-50 hover:text-red-500 transition-colors "
-        >
-          <li>Services</li>
-        </a>
-        <a
-          href="#"
-          className="text-lg text-slate-50 hover:text-red-500 transition-colors "
-        >
-          <li>Case Studies</li>
-        </a>
-        <a
-          href="#"
-          className="text-lg text-slate-50 hover:text-red-500 transition-colors "
-        >
-          <li>Blog</li>
-        </a>
+    <nav className="mt-[81px] lg:mt-[71px] md:mt-[61px] sm:mt-[50px] w-[50%] sm:hidden">
+      <ul className="flex flex-col gap-3 ml-[30%] text-left md:justify-between md:text-right">
+        <li className="text-red-500 font-medium">Jump to</li>
+        {navData.map((i) => (
+          <a
+            key={i}
+            href="#"
+            className="text-lg text-slate-50 hover:text-red-500 transition-colors lg:text-base"
+          >
+            <li>{i}</li>
+          </a>
+        ))}
       </ul>
     </nav>
   );

@@ -1,0 +1,45 @@
+.burger {
+  display: block;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-around;
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.active {
+  .line1 {
+    transform: rotate(45deg);
+  }
+  .line2 {
+    transform: scaleY(0);
+  }
+
+  .line3 {
+    transform: rotate(-45deg);
+  }
+}
