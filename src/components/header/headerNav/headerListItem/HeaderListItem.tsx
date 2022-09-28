@@ -9,7 +9,7 @@ const HeaderListItem = ({ children }: Props) => {
     <li>
       <a
         href="#"
-        className="text-xl text-rose-500 font-medium hover:text-red-700  transition-color lg:text-base"
+        className="text-xl text-rose-500 font-medium hover:text-black  transition-color lg:text-base dark:text-slate-50 dark:hover:text-red-600"
       >
         {children}
       </a>

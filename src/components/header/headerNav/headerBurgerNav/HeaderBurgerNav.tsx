@@ -1,21 +1,21 @@
 import React, { useContext, useState } from "react";
-import { isActiveMenuContext } from "../../../../data/contex/IsActiveMenuContext";
+import { isActiveMenu } from "../../../../hooks/navIsActiveContext";
 import s from "./style.module.scss";
 
 const HeaderBurgerNav = () => {
-  const { isActive, setIsActive } = useContext(isActiveMenuContext);
+  const { isActive, setIsActive } = useContext(isActiveMenu);
   const clickHandler = (e: React.MouseEvent<HTMLDivElement>): void => {
     setIsActive(!isActive);
   };
 
   return (
     <div
-      className={!isActive ? s.burger : `${s.burger} ${s.active}`}
+      className={!isActive ? s.burger : `${s.burger} ${s.active} `}
       onClick={clickHandler}
     >
-      <span className={s.line1}></span>
-      <span className={s.line2}></span>
-      <span className={s.line3}></span>
+      <span className={`${s.line1} dark:bg-slate-50`}></span>
+      <span className={`${s.line2} dark:bg-slate-50`}></span>
+      <span className={`${s.line3} dark:bg-slate-50`}></span>
     </div>
   );
 };

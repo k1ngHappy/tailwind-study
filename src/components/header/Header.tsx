@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { isActiveMenuContext } from "../../data/contex/IsActiveMenuContext";
+import { isActiveMenu } from "../../hooks/navIsActiveContext";
 import HeaderMain from "./headerMain/HeaderMain";
 import HeaderNav from "./headerNav/HeaderNav";
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   return (
-    <isActiveMenuContext.Provider
+    <isActiveMenu.Provider
       value={{
         isActive,
         setIsActive,
@@ -17,7 +17,7 @@ const Header = () => {
           <HeaderMain />
         </div>
       </header>
-    </isActiveMenuContext.Provider>
+    </isActiveMenu.Provider>
   );
 };
 

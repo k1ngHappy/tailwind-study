@@ -6,7 +6,7 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <div
-      className="container flex justify-between mt-[146px] flex-wrap sm:justify-center md:mt-[100px]"
+      className="container flex justify-between mt-[146px] flex-wrap sm:justify-center md:mt-[100px] dark:text-slate-50"
       id="About "
     >
       <div className="w-[50%] sm:w-[70%]">
@@ -22,11 +22,11 @@ const About = (props: Props) => {
           Praesent non urna. Nulla congue porta lectus in laoreet. Aenean
           pellentesque vitae metus id porttitor.t
         </p>
-        <div className="pl-[17%]">
+        <div className="pl-[17%] sm:w-[70%] ">
           <MyBtnRedBg children="Learn More" />
         </div>
       </div>
-      <div className="w-[50%] sm:hidden ">
+      <div className="w-[50%]  sm:hidden">
         <img
           src={process.env.PUBLIC_URL + "/images/About.png"}
           alt="Image"

@@ -7,12 +7,14 @@
   right: 40%;
   z-index: 5;
   text-align: center;
-
-  @media (min-width: 768px) {
-    display: none;
-  }
 }
 
 .active {
   display: flex;
+}
+
+@media (min-width: 769px) {
+  .nav {
+    display: none;
+  }
 }

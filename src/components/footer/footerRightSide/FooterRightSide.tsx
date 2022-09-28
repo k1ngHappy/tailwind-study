@@ -1,12 +1,12 @@
 import React from "react";
-import { navData } from "../../../data/NavData";
+import { navList } from "../../header/headerNav/NavList";
 
 const FooterRightSide = () => {
   return (
     <nav className="mt-[81px] lg:mt-[71px] md:mt-[61px] sm:mt-[50px] w-[50%] sm:hidden">
       <ul className="flex flex-col gap-3 ml-[30%] text-left md:justify-between md:text-right">
         <li className="text-red-500 font-medium">Jump to</li>
-        {navData.map((i) => (
+        {navList.map((i: string) => (
           <a
             key={i}
             href="#"

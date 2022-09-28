@@ -1,4 +1,4 @@
-export const navData: string[] = [
+export const navList: string[] = [
   "About",
   "Services",
   "Case Studies",
